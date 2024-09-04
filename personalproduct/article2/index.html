@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Article 2</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
+	<link rel="icon" href="favicon.png">
+	<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+	 <ul class="topbar">
+	  <li class = "topbarelement"><a href="../index.html" >Home</a></li>
+	  <li class = "topbarelement"><a href="../article1/index.html">Article 1</a></li>
+	  <li class = "topbarelement"><a href="index.html" class="active">Article 2</a></li>
+	  <li class = "topbarelement"><a href="../article3/index.html">Article 3</a></li>
+	</ul> 
+	<hr>
+  <h1>Understanding Merge Sort: A Divide and Conquer Algorithm</h1>
+
+  <p>
+    Sorting is a fundamental operation in computer science, and various algorithms have been developed to efficiently organize data.
+    One such algorithm that stands out for its simplicity and efficiency is Merge Sort.
+    Merge Sort is a divide-and-conquer algorithm that divides the input array into smaller sub-arrays, sorts them independently, and then merges them to produce a sorted result.
+    This article will delve into the details of Merge Sort, explaining its principles and step-by-step process.
+  </p>
+
+  <h2>The Divide-and-Conquer Paradigm</h2>
+
+  <p>
+    Merge Sort follows the divide-and-conquer paradigm, which involves breaking down a problem into smaller, more manageable sub-problems.
+    The algorithm is divided into three main steps:
+  </p>
+
+  <ol>
+    <li><strong>Divide:</strong> The original problem is divided into smaller sub-problems.</li>
+    <li><strong>Conquer:</strong> Each sub-problem is solved independently.</li>
+    <li><strong>Combine:</strong> The solutions to the sub-problems are combined to solve the original problem.</li>
+  </ol>
+
+  <h2>Merge Sort Algorithm:</h2>
+
+  <h3>Step 1: Divide</h3>
+
+  <p>
+    The first step in Merge Sort is to recursively divide the input array into two halves until each sub-array contains only one element.
+    This is done by finding the middle of the array and splitting it into two parts.
+  </p>
+
+  <pre>
+    <code>
+[8, 4, 2, 1, 7, 5, 3, 6]
+      /               \
+[8, 4, 2, 1]        [7, 5, 3, 6]
+/         \         /         \
+[8, 4]   [2, 1]   [7, 5]     [3, 6]
+/    \    /   \    /    \     /    \
+[8]  [4]  [2] [1]  [7]  [5]   [3]   [6]
+    </code>
+  </pre>
+
+  <h3>Step 2: Conquer</h3>
+
+  <p>
+    Once the array is divided into individual elements, the sorting begins.
+    Each pair of elements is compared and merged in ascending order, creating sorted sub-arrays.
+  </p>
+
+  <pre>
+    <code>
+[4, 8]   [1, 2]   [5, 7]   [3, 6]
+    </code>
+  </pre>
+
+  <h3>Step 3: Combine</h3>
+
+  <p>
+    The final step involves merging the sorted sub-arrays to produce a fully sorted array.
+    This is achieved by comparing the elements from each sub-array and arranging them in ascending order.
+  </p>
+
+  <pre>
+    <code>
+[1, 2, 4, 5, 7, 8, 3, 6]
+    </code>
+  </pre>
+
+  <p>
+    The two sorted halves are merged to create a single, sorted array.
+  </p>
+
+  <h3>Recursive Nature</h3>
+
+  <p>
+    Merge Sort uses recursion to repeatedly apply these steps until the entire array is sorted.
+    The process of dividing, conquering, and combining continues until the base case, where the sub-array contains only one element, is reached.
+  </p>
+
+  <h2>Key Advantages:</h2>
+
+  <ol>
+    <li><strong>Stable Sorting:</strong> Merge Sort is a stable sorting algorithm, meaning that it maintains the relative order of equal elements in the sorted output.</li>
+    <li><strong>Predictable Performance:</strong> It guarantees a time complexity of O(n log n) in all cases, making it efficient for large datasets.</li>
+    <li><strong>External Sorting:</strong> Merge Sort is well-suited for external sorting scenarios, where data is too large to fit into the main memory.</li>
+    <li><strong>Parallelization:</strong> The algorithm can be easily parallelized, taking advantage of multiple processors for faster sorting.</li>
+  </ol>
+
+  <h2>Conclusion:</h2>
+
+  <p>
+    Merge Sort is a reliable and efficient sorting algorithm that adopts the divide-and-conquer approach to sort arrays.
+    Its predictable performance, stability, and suitability for large datasets make it a popular choice in various applications.
+    Understanding the underlying principles and steps of Merge Sort provides valuable insights into the world of sorting algorithms and contributes to a solid foundation in computer science.
+  </p>
+  
+  <h1>Demystifying Binary Search: A Logarithmic Approach to Finding Elements</h1>
+
+  <p>
+    In the realm of computer science, efficient searching algorithms play a crucial role in optimizing performance and saving computational resources.
+    One such algorithm that stands out for its simplicity and effectiveness is the Binary Search.
+    This article will explore the intricacies of Binary Search, elucidating its principles and step-by-step process.
+  </p>
+
+  <h2>The Essence of Binary Search</h2>
+
+  <p>
+    Binary Search is an algorithm designed for efficiently finding a specific target value within a sorted array.
+    Unlike linear search, which examines each element sequentially, Binary Search exploits the fact that the array is sorted to drastically reduce the search space in each iteration.
+    This results in a logarithmic time complexity, making Binary Search highly efficient, especially for large datasets.
+  </p>
+
+  <h2>Binary Search Algorithm:</h2>
+
+  <h3>Step 1: Initial Setup</h3>
+
+  <p>
+    Binary Search begins by defining the boundaries of the search space.
+    Given a sorted array, the algorithm sets two pointers – low and high – to the first and last elements of the array, respectively.
+  </p>
+
+  <pre>
+    <code>
+Sorted Array: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Low Pointer: 1
+High Pointer: 10
+Target Value: 6
+    </code>
+  </pre>
+
+  <h3>Step 2: Midpoint Calculation</h3>
+
+  <p>
+    The algorithm calculates the midpoint between the low and high pointers.
+    This midpoint is used to determine whether the target value lies in the left or right half of the current search space.
+  </p>
+
+  <pre>
+    <code>
+Midpoint: (1 + 10) / 2 = 5.5 (rounded down to 5)
+    </code>
+  </pre>
+
+  <h3>Step 3: Comparison</h3>
+
+  <p>
+    The target value is compared with the element at the calculated midpoint.
+    Three possible scenarios can arise:
+  </p>
+
+  <ul>
+    <li>If the target value is equal to the midpoint element, the search is successful.</li>
+    <li>If the target value is less than the midpoint element, the search continues in the left half.</li>
+    <li>If the target value is greater than the midpoint element, the search continues in the right half.</li>
+  </ul>
+
+  <p>
+    In our example, the target value (6) is greater than the midpoint element (5), so the search shifts to the right half.
+  </p>
+
+  <h3>Step 4: Adjusting Pointers</h3>
+
+  <p>
+    Based on the comparison, the low or high pointer is adjusted to narrow down the search space.
+    In this case, the low pointer is updated to the element immediately to the right of the midpoint.
+  </p>
+
+  <pre>
+    <code>
+Low Pointer: 6
+High Pointer: 10
+    </code>
+  </pre>
+
+  <h3>Step 5: Iterative Process</h3>
+
+  <p>
+    Steps 2-4 are repeated iteratively until the target value is found or the low pointer surpasses the high pointer, indicating that the value is not present in the array.
+  </p>
+
+  <h3>Step 6: Conclusion</h3>
+
+  <p>
+    Binary Search concludes when the target value is found or when the low pointer exceeds the high pointer.
+    The search process is efficient due to the logarithmic reduction in the search space at each iteration.
+  </p>
+
+  <h2>Key Advantages:</h2>
+
+  <ol>
+    <li><strong>Logarithmic Time Complexity:</strong> Binary Search guarantees a time complexity of O(log n), making it highly efficient for large datasets.</li>
+    <li><strong>Simplicity:</strong> The algorithm's simplicity makes it easy to implement and understand.</li>
+    <li><strong>Optimal Use of Sorted Data:</strong> Binary Search leverages the fact that the array is sorted, optimizing the search process.</li>
+  </ol>
+
+  <h2>Conclusion:</h2>
+
+  <p>
+    Binary Search is a powerful algorithm renowned for its efficiency in locating elements within a sorted array.
+    Its logarithmic time complexity and straightforward implementation make it a staple in various applications, particularly in scenarios where quick and efficient searching is paramount.
+    Understanding the principles of Binary Search provides a valuable foundation for algorithmic thinking and problem-solving in the world of computer science.
+  </p>
+<h1>Interactive Demo</h1>
+<h2>Simple Bubble Sort Code</h2>
+<pre>
+function sort(arr) {
+    for (var i = 0; i < arr.length; i++) {
+        for (var j = 0; j < (arr.length - i - 1); j++) {
+            if (arr[j] > arr[j + 1]) {
+                var temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+    return arr;
+}
+</pre>
+<h2>Merge Sort Code</h2>
+<pre>
+function sort(arr) {
+	if (arr.length <= 1) return arr
+	let mid = Math.floor(arr.length / 2)
+	// Recursive calls
+	let left = sort(arr.slice(0, mid))
+  	let right = sort(arr.slice(mid))
+  	return merge(left, right)
+}
+function merge(left, right) {
+	let sortedArr = [];
+	while (left.length && right.length) {
+		if (left[0] < right[0]) {
+			sortedArr.push(left.shift());
+    		} else {
+      			sortedArr.push(right.shift());
+    		}
+  	}
+  	return [...sortedArr, ...left, ...right]
+}
+</pre>
+<textarea id="codeInputArea" rows="30" cols="60">
+function sort(arr) {
+	if (arr.length <= 1) return arr
+	let mid = Math.floor(arr.length / 2)
+	// Recursive calls
+	let left = sort(arr.slice(0, mid))
+  	let right = sort(arr.slice(mid))
+  	return merge(left, right)
+}
+function merge(left, right) {
+	let sortedArr = [];
+	while (left.length && right.length) {
+		if (left[0] < right[0]) {
+			sortedArr.push(left.shift());
+    		} else {
+      			sortedArr.push(right.shift());
+    		}
+  	}
+  	return [...sortedArr, ...left, ...right]
+}
+</textarea>
+<button onclick="runUserCode();">Click me!</button>
+<canvas id="outputCanvas" width="400" height="200"></canvas>
+<script src="main.js"></script>
+</body>
+</html>

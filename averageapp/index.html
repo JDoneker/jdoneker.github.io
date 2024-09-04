@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Average Calculator Final</title>
+    
+    <script>let inputs = [];let temp;let temp2;</script>
+    <script>
+    //function that generates input areas 
+    function myFunction(){
+        //gets input from the length input box and tests to see if it is valid
+        let len = parseInt(document.getElementById("lenNum").value);
+        console.log(len);
+        if(len <= 0 || isNaN(len)||len>5000){
+            console.log("invalid");
+            return
+        }
+        //Replaces the text on screen
+        temp = document.createElement("p");
+        temp2 = document.getElementById("text1");
+        temp.innerText = "Fill in the list.";
+        temp.setAttribute("id", "text2")
+        temp2.parentNode.replaceChild(temp, temp2);
+        
+        //makes a new button with a new id
+        temp = document.createElement("button");
+        temp2 = document.getElementById("lenNum");
+        temp.innerText = "Calculate List";
+        temp.setAttribute("onClick", "listFunction()")
+        temp.setAttribute("id", "listButton")
+        temp2.parentNode.replaceChild(temp, temp2);
+        
+        //removes the old button
+        temp = document.getElementById("lenButton");
+        temp.remove();
+        
+        //creates a list of input objects
+        for(var i = 0; i < len; i++){
+            temp = document.createElement("input")
+            inputs.push(temp);
+        }
+        
+        //sets all the appropriate settings to the inputs and then puts them on the screen.
+        for(var i = 0; i < inputs.length; i++){
+            temp = document.createElement("p6");
+            temp.innerText = (i+1)+":";
+            document.body.appendChild(temp);
+            inputs[i].innerText = "";
+            inputs[i].setAttribute("type", "number")
+            inputs[i].setAttribute("id", "box"+i)
+            document.body.appendChild(inputs[i]);
+            document.body.appendChild(document.createElement("br"));
+        }
+        
+    }
+    </script>
+    <script>
+    //this function calculates and displays the average of the users inputs
+    function listFunction(){
+        //variable declaration
+        let values = [];
+        let avg;
+        let total = 0;
+        //retrives all of the values from the inputs and checks if they are valid
+        for(var i = 0; i < inputs.length; i++){
+            temp = parseInt(document.getElementById(inputs[i].id).value);
+            if(isNaN(temp)||temp>5000){
+                console.log("invalid list element" + i);
+                return  
+            }
+            values.push(temp);
+        }
+        
+        console.log(values);
+        
+        //prevents further editing of the values
+        for(var i = 0; i < inputs.length; i++){
+            temp = document.createElement("p6");
+            temp2 = document.getElementById(inputs[i].id);
+            temp.innerText = " " + values[i];
+            temp2.parentNode.replaceChild(temp, temp2);
+        }
+        
+        //calculates average
+        for(var i = 0; i < values.length; i++){
+            total+=values[i]
+        }
+        avg = total/values.length;
+        
+        console.log(avg);
+        
+        //replaces button
+        temp = document.createElement("p6");
+        temp2 = document.getElementById("listButton");
+        temp.innerText = "Average: " + avg;
+        temp2.parentNode.replaceChild(temp, temp2);
+        
+        //replaces text
+        temp = document.createElement("p");
+        temp2 = document.getElementById("text2");
+        temp.innerText = "Average Calculated!";
+        temp2.parentNode.replaceChild(temp, temp2);
+
+    }
+    </script>
+</head>
+<body>
+<button onClick="window.location.reload();">Restart</button>
+<p id="text1">Select how many values to create.</p>
+
+<input type="number" id="lenNum"><br>
+<button onclick="myFunction()" id="lenButton">Generate</button><br>
+</body>
+</html>

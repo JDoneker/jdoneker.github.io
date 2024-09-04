@@ -1,0 +1,66 @@
+body{
+	 background-color: black;
+	 margin-top: 0px;
+	 margin-bottom: 0px;
+	color: white;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+center.title {
+	font-size: 30px;
+}
+button {
+	padding: 8px 8px;
+	text-align: center;
+	text-decoration: none;
+	display: block;
+	font-size: 16px;
+	transition-duration: 0.4s;
+	cursor: pointer;
+}
+button.centerButton{
+	color: lightgray;
+	border: 5px solid darkslateblue;
+	background-color: navy;
+	margin-left: auto;
+	margin-right: auto;
+	width: 8em;
+}
+button.centerButton:hover {
+	background-color: darkslateblue;
+	transform:matrix(1.01,0.00,0.00,1.01,0,0);
+	color: white;
+}
+img{
+	width: 30%;
+	height: 30%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+footer {
+	text-align: center;
+	font-size: 10px;
+}
+div.outputsDiv {
+	text-align: center;
+	display: block;
+	width: 25em;
+	margin-left: auto;
+	margin-right: auto;
+}
+div.outputDiv {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	color: white;
+	border: 5px solid darkslateblue;
+	background-color: dimgray;
+}
+span {
+	display: block;
+	text-align: center;
+}
+input {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}

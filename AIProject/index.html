@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hello, world!</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="" />
+  <link rel="icon" href="favicon.png">
+</head>
+<body>
+  <h1>Why this is ai.</h1>
+  <p>How i made ai</p>
+  <video id="myVidPlayer" controls muted autoplay></video>
+  <p>TThi is a super artificuial nueural network ai detector please. DO you best, :)</p>
+  <p id="myAIDetector"></p>
+
+  
+  <script type="text/javascript">
+    //Selector for your <video> element
+    const video = document.querySelector('#myVidPlayer');
+    const text = document.querySelector('myAIDetector');
+
+    //Core
+    window.navigator.mediaDevices.getUserMedia({ video: true })
+        .then(stream => {
+            video.srcObject = stream;
+            video.onloadedmetadata = (e) => {
+                video.play();
+            };
+        })
+        .catch( () => {
+            alert('You have give browser the permission to run Webcam and mic ;( ');
+        });
+    while(true){
+        temp = Math.random();
+        text.innerText = temp;
+        
+    }
+</script>
+
+</body>
+</html>

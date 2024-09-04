@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Article 3</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
+	<link rel="icon" href="favicon.png">
+	<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+	 <ul class="topbar">
+	  <li class = "topbarelement"><a href="../index.html" >Home</a></li>
+	  <li class = "topbarelement"><a href="../article1/index.html">Article 1</a></li>
+	  <li class = "topbarelement"><a href="../article2/index.html">Article 2</a></li>
+	  <li class = "topbarelement"><a href="index.html" class="active">Article 3</a></li>
+	</ul> 
+	<hr>
+    <article>
+        <header>
+            <h1>Backpropagation Basics</h1>
+        </header>
+
+        <section>
+            <h2>Introduction:</h2>
+            <p>Backpropagation, a fundamental concept in the field of artificial neural networks, plays a pivotal role in training neural networks for various tasks. This article delves into the intricate details of the backpropagation algorithm, unraveling its roots in multivariable calculus and shedding light on its diverse applications in the realm of machine learning.</p>
+        </section>
+
+        <section>
+            <h2>Understanding Backpropagation:</h2>
+            <p>At its core, backpropagation is a supervised learning algorithm used for training artificial neural networks. It enables the network to learn from its mistakes by iteratively adjusting the weights of its connections. The key principle driving backpropagation is error minimization, aiming to reduce the difference between the predicted and actual outputs of the network.</p>
+        </section>
+
+        <section>
+            <h2>Multivariable Calculus and Backpropagation:</h2>
+            <p>To comprehend the inner workings of backpropagation, one must explore its mathematical underpinnings in multivariable calculus. The chain rule, a fundamental concept in calculus, serves as the backbone of the backpropagation algorithm. The chain rule allows for the calculation of gradients, which are essential in determining how changes in the network's parameters affect the overall error.</p>
+            <p>The backpropagation process involves two main steps: the forward pass and the backward pass. During the forward pass, input data is propagated through the neural network, producing an output. The error between the predicted and actual output is then computed. In the backward pass, the algorithm traverses the network backward, calculating the gradients of the error with respect to the weights using the chain rule. These gradients guide the adjustment of weights to minimize the error in subsequent iterations.</p>
+        </section>
+
+        <section>
+            <h2>Applications of Backpropagation:</h2>
+            <p>The versatility of backpropagation extends its applicability to a wide array of machine learning tasks. Some notable applications include:</p>
+            <ol>
+                <li><strong>Image Recognition:</strong> Backpropagation has been instrumental in the development of convolutional neural networks (CNNs) for image recognition tasks. The algorithm enables the network to learn and extract meaningful features from images through the iterative adjustment of weights.</li>
+                <li><strong>Natural Language Processing (NLP):</strong> In NLP, recurrent neural networks (RNNs) and long short-term memory networks (LSTMs) utilize backpropagation for tasks such as language modeling, sentiment analysis, and machine translation.</li>
+                <li><strong>Speech Recognition:</strong> Backpropagation is employed in training neural networks for speech recognition, allowing the model to learn and improve its accuracy over time.</li>
+                <li><strong>Financial Forecasting:</strong> Neural networks with backpropagation are utilized in financial applications for tasks like stock price prediction and risk assessment. The algorithm's ability to adapt to changing patterns makes it valuable in dynamic financial environments.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Conclusion:</h2>
+            <p>Backpropagation stands as a cornerstone in the realm of neural network training, blending principles from multivariable calculus with practical applications in machine learning. Understanding the algorithm's mathematical foundations empowers researchers and practitioners to optimize neural networks for an ever-expanding array of tasks, pushing the boundaries of what artificial intelligence can achieve in the modern era.</p>
+        </section>
+
+    </article>
+
+</body>
+</html>
+

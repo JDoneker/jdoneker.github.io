@@ -1,0 +1,30 @@
+body.main{
+	 background-color: lightgray;
+	 margin-top: 0px;
+	 margin-bottom: 0px;
+}
+div.listContainer {
+	background-color: gray;
+}
+center {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-size: 30px;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+ul.centerUL {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	background-color: green;
+	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
+	width: 8em;
+	border-style: solid;
+	border-color: lightblue;
+	transition: transform 1600ms ease;
+}
+li {
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size: 18px;
+}

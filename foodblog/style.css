@@ -9,25 +9,44 @@
     background: #f1f1f1;
   }
   
-  /* Header/Blog Title */
-  .header {
-    padding: 30px;
-    font-size: 40px;
-    text-align: center;
-    background: white;
-  }
-  
+
+  .titlebackground {
+  background-image: url('kitchenbackground1.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 0px;
+  height: 300px;
+  position: relative;
+}
+.titlebackground div {
+	background-color: #ffffff;
+	border: 5px outset #f1f1f1;
+	width: 50%;
+	height: 30%;
+	margin: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+	
+}
+.titlebackground div h1 {
+	color: black;
+	text-align: center;
+}
   /* Create two unequal columns that floats next to each other */
   /* Left column */
   .leftcolumn {   
     float: left;
-    width: 75%;
+    width: 65%;
   }
   
   /* Right column */
   .rightcolumn {
     float: left;
-    width: 25%;
+    width: 35%;
     padding-left: 20px;
   }
   

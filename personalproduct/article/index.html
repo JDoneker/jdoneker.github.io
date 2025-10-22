@@ -17,44 +17,22 @@
   </ul>
   <hr>
   <h1>Interactive Demo</h1>
-  <h2>Simple Bubble Sort Code</h2>
-  <pre>
-function sort(arr) {
-    for (var i = 0; i < arr.length; i++) {
-        for (var j = 0; j < (arr.length - i - 1); j++) {
-            if (arr[j] > arr[j + 1]) {
-                var temp = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = temp;
-            }
-        }
-    }
-    return arr;
-}
-</pre>
-  <h2>Merge Sort Code</h2>
-  <pre>
-function sort(arr) {
-	if (arr.length <= 1) return arr
-	let mid = Math.floor(arr.length / 2)
-	// Recursive calls
-	let left = sort(arr.slice(0, mid))
-  	let right = sort(arr.slice(mid))
-  	return merge(left, right)
-}
-function merge(left, right) {
-	let sortedArr = [];
-	while (left.length && right.length) {
-		if (left[0] < right[0]) {
-			sortedArr.push(left.shift());
-    		} else {
-      			sortedArr.push(right.shift());
-    		}
-  	}
-  	return [...sortedArr, ...left, ...right]
-}
-</pre>
-  <textarea id="codeInputArea" rows="30" cols="60">
+
+  <div class="controls">
+    <button id="loadBubbleBtn" class="btn">Load Bubble Sort</button>
+    <button id="loadMergeBtn" class="btn">Load Merge Sort</button>
+
+    <label for="itemCount">Number of items:</label>
+    <input id="itemCount" type="number" min="10" max="200000" step="10" value="30000" style="width:120px;" />
+
+    <button id="runBtn" class="btn">Run</button>
+    <button id="stopBtn" class="btn" disabled>Stop</button>
+
+    
+  </div>
+
+  <h2>Code</h2>
+  <textarea id="codeInputArea" rows="20" cols="60">
 function sort(arr) {
 	if (arr.length <= 1) return arr
 	let mid = Math.floor(arr.length / 2)
@@ -74,9 +52,13 @@ function merge(left, right) {
   	}
   	return [...sortedArr, ...left, ...right]
 }
-</textarea>
-  <button onclick="runUserCode();">Click me!</button>
-  <canvas id="outputCanvas" width="400" height="200"></canvas>
+  </textarea>
+
+  <div class="output" id="outputArea">
+    <strong>Result:</strong>
+    <div id="resultText">Not run yet.</div>
+  </div>
+
   <script src="main.js"></script>
 
   <h1>Understanding Merge Sort: A Divide and Conquer Algorithm</h1>
